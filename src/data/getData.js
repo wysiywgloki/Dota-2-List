@@ -1,8 +1,9 @@
 import axios from "axios"
 
-const fetchAll = async(path)=>{
+const fetchAll = async (path) => {
 
-    return await axios.get(path)
+    return await axios.get(path
+    )
 
 }
 

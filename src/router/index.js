@@ -26,7 +26,12 @@ const routes = [
       {
         path: 'tab3',
         component: () => import('@/views/Tab3Page.vue')
-      }
+      },
+      {
+        path: 'hero/:hero',
+        name: 'heroPage',
+        component: () => import('@/views/HeroPage.vue')
+      },
     ]
   }
 ]
