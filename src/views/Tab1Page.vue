@@ -12,12 +12,41 @@
         </ion-toolbar>
       </ion-header>
 
-      <ExploreContainer name="Tab 1 page" />
+
+
+      {{ data.data.hero }}
+
+
+
     </ion-content>
   </ion-page>
 </template>
 
-<script setup lang="ts">
+<script  >
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+
+import fetchAll from '../data/getData';
+import { onMounted, ref } from 'vue';
+
+export default{
+
+  components:{IonPage, IonHeader, IonToolbar, IonTitle, IonContent},
+  setup(){
+
+    const data = ref([])
+
+    // onMounted(async()=>{
+
+    //   data.value = await fetchAll('https://api.dazelpro.com/mobile-legends/hero')
+
+    // })
+
+  
+
+
+
+    return {data}
+  }
+
+}
 </script>
